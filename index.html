@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>Akli — Macro-Perfect Meals, Delivered Fresh in Lebanon</title>
-<meta name="description" content="Tell Akli your goal. We calculate your exact macros and deliver fresh, made-to-order meals to your door in Lebanon. No guessing, no boring chicken-and-rice." />
+<title>Akli — Your Goal. Your Macros. Your Meals.</title>
+<meta name="description" content="Tell Akli your goal. We calculate your exact macros and deliver fresh, made-to-order meals to your door from Beirut to Jounieh. No guessing, no boring chicken-and-rice." />
 
-<meta property="og:title" content="Akli — Your Body. Your Macros. Your Meals." />
-<meta property="og:description" content="Macro-optimised meal prep delivered fresh in Lebanon. Calculate your plan in 60 seconds." />
+<meta property="og:title" content="Akli — Your Goal. Your Macros. Your Meals." />
+<meta property="og:description" content="Macro-optimised meal prep delivered fresh, from Beirut to Jounieh. Calculate your plan in 60 seconds." />
 <meta property="og:image" content="assets/logo.png" />
 <meta property="og:type" content="website" />
 
@@ -63,9 +63,16 @@ img{max-width:100%;display:block;}
   transition:border-color .3s, background .3s;
 }
 .nav.scrolled{border-bottom-color:var(--border);background:rgba(238,233,230,0.92);}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%;}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%;gap:18px;}
 .brand{display:flex;align-items:center;gap:10px;font-family:'Playfair Display',serif;font-size:22px;color:var(--primary);}
 .brand img{height:30px;width:auto;}
+.nav-links{display:flex;align-items:center;gap:4px;background:rgba(255,255,255,.55);border:1px solid var(--border);border-radius:999px;padding:5px;}
+.nav-links a{
+  padding:8px 16px;border-radius:999px;font-size:13.5px;font-weight:600;color:var(--primary);
+  transition:background .2s,color .2s;
+}
+.nav-links a:hover{background:var(--white);color:var(--teal-dark);}
+@media (max-width:760px){.nav-links{display:none;}}
 .nav-cta{
   background:var(--primary);color:var(--white);
   padding:10px 20px;border-radius:999px;font-weight:600;font-size:13.5px;
@@ -79,9 +86,9 @@ img{max-width:100%;display:block;}
 /* ---------- hero ---------- */
 .hero{
   position:relative;
-  min-height:100vh;
+  min-height:88vh;
   display:flex;align-items:center;
-  padding:120px 0 80px;
+  padding:108px 0 56px;
   overflow:hidden;
 }
 .hero-bg{
@@ -187,8 +194,8 @@ img{max-width:100%;display:block;}
 @keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
 /* ---------- section shell ---------- */
-section{padding:96px 0;}
-.section-head{max-width:640px;margin:0 auto 56px;text-align:center;}
+section{padding:64px 0;}
+.section-head{max-width:600px;margin:0 auto 40px;text-align:center;}
 .section-head .tag{
   display:inline-block;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
   color:var(--teal-dark);margin-bottom:14px;
@@ -204,11 +211,13 @@ section{padding:96px 0;}
 }
 .step:hover{transform:translateY(-8px);box-shadow:0 24px 40px -16px rgba(6,51,48,.18);}
 .step-num{
-  width:38px;height:38px;border-radius:50%;background:var(--primary);color:var(--white);
-  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;margin-bottom:18px;
+  width:50px;height:50px;border-radius:50%;background:var(--off-white);
+  display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:16px;
+  transition:transform .3s, background .3s;
 }
-.step h3{font-size:18px;color:var(--text);margin-bottom:8px;}
-.step p{font-size:13.5px;color:var(--muted);}
+.step:hover .step-num{transform:scale(1.15) rotate(-6deg);background:#eef7f6;}
+.step h3{font-size:16.5px;color:var(--text);margin-bottom:6px;}
+.step p{font-size:13px;color:var(--muted);}
 
 /* ---------- calculator ---------- */
 .calc-section{background:var(--primary);color:var(--off-white);border-radius:0;position:relative;overflow:hidden;}
@@ -269,17 +278,14 @@ section{padding:96px 0;}
 .menu-scroll::-webkit-scrollbar{height:6px;}
 .menu-scroll::-webkit-scrollbar-thumb{background:var(--border);border-radius:6px;}
 .dish{
-  flex:0 0 240px;scroll-snap-align:start;border-radius:20px;overflow:hidden;
+  flex:0 0 min(240px,70vw);scroll-snap-align:start;border-radius:20px;overflow:hidden;
   background:var(--white);border:1px solid var(--border);transition:transform .25s, box-shadow .25s;
 }
 .dish:hover{transform:translateY(-6px);box-shadow:0 20px 36px -14px rgba(6,51,48,.2);}
-.dish-img{
-  height:160px;display:flex;align-items:center;justify-content:center;font-size:46px;
-}
+.dish-img{aspect-ratio:4/3;overflow:hidden;background:var(--off-white);}
+.dish-img img{width:100%;height:100%;object-fit:cover;object-position:center;}
 .dish-body{padding:16px;}
-.dish-body h4{font-family:'DM Sans';font-weight:700;font-size:14.5px;margin-bottom:4px;}
-.dish-macros{display:flex;gap:8px;margin-top:10px;font-size:11px;color:var(--muted);}
-.dish-macros span{background:var(--off-white);border-radius:6px;padding:3px 7px;font-weight:600;}
+.dish-body h4{font-family:'DM Sans';font-weight:700;font-size:14.5px;}
 
 /* ---------- testimonials ---------- */
 .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
@@ -340,8 +346,17 @@ section{padding:96px 0;}
 footer{padding:48px 0 32px;border-top:1px solid var(--border);}
 .foot-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
 .foot-grid .brand{font-size:18px;}
-.foot-links{display:flex;gap:22px;font-size:13px;color:var(--muted);flex-wrap:wrap;}
+.foot-links{display:flex;align-items:center;gap:22px;font-size:13px;color:var(--muted);flex-wrap:wrap;}
 .foot-links a:hover{color:var(--primary);}
+
+/* ---------- toters badge ---------- */
+.toters-badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--light);
+  transition:color .2s;
+}
+.toters-badge img{height:13px;width:auto;opacity:.8;transition:opacity .2s;}
+.toters-badge:hover{color:var(--primary);}
+.toters-badge:hover img{opacity:1;}
 
 /* ---------- whatsapp float ---------- */
 .wa-float{
@@ -378,6 +393,12 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
 <nav class="nav" id="nav">
   <div class="wrap">
     <div class="brand"><img src="assets/logo.png" alt="Akli" />akli</div>
+    <div class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#menu">Menu</a>
+      <a href="#results">Results</a>
+      <a href="#faq">FAQ</a>
+    </div>
     <a class="nav-cta" href="https://app.akli-lb.org" target="_blank" rel="noopener">
       Get my plan
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -394,9 +415,9 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
   </div>
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow"><span class="dot-live"></span> Now delivering across Lebanon</div>
-      <h1>Your macros,<br><em>your meals,</em><br>your door.</h1>
-      <p class="lead">Tell Akli your goal — we calculate your exact protein, carbs and fat, then cook and deliver meals built around <em>your</em> numbers. Not a generic meal plan. Yours.</p>
+      <div class="eyebrow"><span class="dot-live"></span> Delivering Beirut → Jounieh</div>
+      <h1>Your goal.<br><em>Your macros.</em><br>Your meals.</h1>
+      <p class="lead">Tell us your goal — we calculate your exact protein, carbs and fat, then cook meals built around <em>your</em> numbers.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="https://app.akli-lb.org" target="_blank" rel="noopener">
           Calculate my plan — free
@@ -405,9 +426,9 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
         <a class="btn btn-ghost" href="#how">See how it works</a>
       </div>
       <div class="trustline">
-        <span>✓ No subscription lock-in</span>
-        <span>✓ Real WhatsApp support</span>
-        <span>✓ Made fresh, never frozen</span>
+        <span>✓ No lock-in</span>
+        <span>✓ WhatsApp support</span>
+        <span>✓ Fresh, never frozen</span>
       </div>
     </div>
 
@@ -440,8 +461,8 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
 <!-- MARQUEE -->
 <div class="marquee-wrap">
   <div class="marquee">
-    <span>Macro-perfect &nbsp;•&nbsp; Cooked fresh daily &nbsp;•&nbsp; WhatsApp support &nbsp;•&nbsp; Built around your body &nbsp;•&nbsp; No boring chicken & rice &nbsp;•&nbsp; Delivered across Lebanon &nbsp;•&nbsp;</span>
-    <span aria-hidden="true">Macro-perfect &nbsp;•&nbsp; Cooked fresh daily &nbsp;•&nbsp; WhatsApp support &nbsp;•&nbsp; Built around your body &nbsp;•&nbsp; No boring chicken & rice &nbsp;•&nbsp; Delivered across Lebanon &nbsp;•&nbsp;</span>
+    <span>🎯 Macro-perfect &nbsp;•&nbsp; 🍳 Cooked fresh daily &nbsp;•&nbsp; 💬 WhatsApp support &nbsp;•&nbsp; 🙌 Built around your body &nbsp;•&nbsp; 🚫 No boring chicken & rice &nbsp;•&nbsp; 🛵 Beirut to Jounieh &nbsp;•&nbsp;</span>
+    <span aria-hidden="true">🎯 Macro-perfect &nbsp;•&nbsp; 🍳 Cooked fresh daily &nbsp;•&nbsp; 💬 WhatsApp support &nbsp;•&nbsp; 🙌 Built around your body &nbsp;•&nbsp; 🚫 No boring chicken & rice &nbsp;•&nbsp; 🛵 Beirut to Jounieh &nbsp;•&nbsp;</span>
   </div>
 </div>
 
@@ -450,29 +471,29 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
   <div class="wrap">
     <div class="section-head reveal">
       <span class="tag">How it works</span>
-      <h2>From goal to plate in 4 steps</h2>
-      <p>No spreadsheets, no calorie-counting apps. Just answer a few questions and we handle the science.</p>
+      <h2>Goal to plate, 4 steps</h2>
+      <p>No spreadsheets. No calorie apps. We handle the science.</p>
     </div>
     <div class="steps">
       <div class="step reveal">
-        <div class="step-num">1</div>
-        <h3>Tell us your goal</h3>
-        <p>Lose fat, build muscle, or just eat better — pick your goal and basics like age, weight and activity.</p>
+        <div class="step-num">🎯</div>
+        <h3>Set your goal</h3>
+        <p>Cut, maintain, or bulk — a few quick basics.</p>
       </div>
       <div class="step reveal">
-        <div class="step-num">2</div>
-        <h3>We calculate your macros</h3>
-        <p>Our engine builds your exact daily kcal and protein/carb/fat targets — no generic templates.</p>
+        <div class="step-num">🧮</div>
+        <h3>We crunch the macros</h3>
+        <p>Your exact kcal, protein, carbs & fat. No templates.</p>
       </div>
       <div class="step reveal">
-        <div class="step-num">3</div>
-        <h3>Pick meals that fit</h3>
-        <p>Browse a real menu engineered to hit your numbers. Swap, adjust, repeat — it's still you in control.</p>
+        <div class="step-num">🍽️</div>
+        <h3>Pick your meals</h3>
+        <p>Browse a menu built to hit your numbers. Swap freely.</p>
       </div>
       <div class="step reveal">
-        <div class="step-num">4</div>
+        <div class="step-num">🛵</div>
         <h3>Fresh, to your door</h3>
-        <p>We cook it fresh and deliver on your schedule. Questions? We're one WhatsApp message away.</p>
+        <p>Cooked fresh, delivered on schedule. One WhatsApp away.</p>
       </div>
     </div>
   </div>
@@ -484,11 +505,11 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
     <div class="reveal">
       <span class="tag">Try it now</span>
       <h2>See your numbers before you commit to anything</h2>
-      <p style="margin-bottom:24px;">This is the exact same engine behind the app — built on real metabolic formulas, not guesswork.</p>
+      <p style="margin-bottom:24px;">Same engine behind the app — real metabolic formulas, no guesswork.</p>
       <ul class="feature-list">
-        <li><span class="ico">⚙</span> Calculated from your sex, age, weight, height & activity level</li>
-        <li><span class="ico">🎯</span> Tuned to your goal — cut, maintain, or bulk</li>
-        <li><span class="ico">💬</span> Fine-tuned with you over WhatsApp after sign-up</li>
+        <li><span class="ico">⚙</span> Based on your body & activity level</li>
+        <li><span class="ico">🎯</span> Tuned to cut, maintain, or bulk</li>
+        <li><span class="ico">💬</span> Fine-tuned with you over WhatsApp</li>
       </ul>
     </div>
 
@@ -555,25 +576,25 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
 </section>
 
 <!-- MENU SHOWCASE -->
-<section>
+<section id="menu">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="tag">The menu</span>
-      <h2>Real food, real macros — never boring</h2>
-      <p>Every dish is engineered to a macro profile, not the other way around.</p>
+      <h2>Real food, never boring</h2>
+      <p>Straight from our kitchen — macros are calculated per serving by our algorithm, never guessed.</p>
     </div>
     <div class="menu-scroll reveal">
-      <div class="dish"><div class="dish-img" style="background:#fde9d0;">🍗</div><div class="dish-body"><h4>Grilled Chicken & Freekeh</h4><div class="dish-macros"><span>P 42g</span><span>C 38g</span><span>F 12g</span></div></div></div>
-      <div class="dish"><div class="dish-img" style="background:#e3f0e9;">🐟</div><div class="dish-body"><h4>Lemon Salmon Bowl</h4><div class="dish-macros"><span>P 38g</span><span>C 30g</span><span>F 18g</span></div></div></div>
-      <div class="dish"><div class="dish-img" style="background:#fbe7e4;">🥩</div><div class="dish-body"><h4>Beef Tenderloin & Quinoa</h4><div class="dish-macros"><span>P 45g</span><span>C 34g</span><span>F 16g</span></div></div></div>
-      <div class="dish"><div class="dish-img" style="background:#eef3da;">🥗</div><div class="dish-body"><h4>Halloumi Power Salad</h4><div class="dish-macros"><span>P 28g</span><span>C 22g</span><span>F 20g</span></div></div></div>
-      <div class="dish"><div class="dish-img" style="background:#f3e6f7;">🍝</div><div class="dish-body"><h4>High-Protein Pasta</h4><div class="dish-macros"><span>P 40g</span><span>C 55g</span><span>F 10g</span></div></div></div>
+      <div class="dish"><div class="dish-img"><img src="https://rjaypqibeymfopncjxkz.supabase.co/storage/v1/render/image/public/recipePicturesBucket/recipe_picture/1781545787435000.png?width=480&quality=80&format=webp" alt="Chicken Fajita Wrap" loading="lazy" /></div><div class="dish-body"><h4>Chicken Fajita Wrap</h4></div></div>
+      <div class="dish"><div class="dish-img"><img src="https://rjaypqibeymfopncjxkz.supabase.co/storage/v1/render/image/public/recipePicturesBucket/recipe_picture/1768683275489000.png?width=480&quality=80&format=webp" alt="Lasagne" loading="lazy" /></div><div class="dish-body"><h4>Lasagne</h4></div></div>
+      <div class="dish"><div class="dish-img"><img src="https://rjaypqibeymfopncjxkz.supabase.co/storage/v1/render/image/public/recipePicturesBucket/recipe_picture/1768683063415000.png?width=480&quality=80&format=webp" alt="Kebbe Bel Sayniye" loading="lazy" /></div><div class="dish-body"><h4>Kebbe Bel Sayniye</h4></div></div>
+      <div class="dish"><div class="dish-img"><img src="https://rjaypqibeymfopncjxkz.supabase.co/storage/v1/render/image/public/recipePicturesBucket/recipe_picture/1781534529630000.png?width=480&quality=80&format=webp" alt="Golden Oat Pancakes" loading="lazy" /></div><div class="dish-body"><h4>Golden Oat Pancakes</h4></div></div>
+      <div class="dish"><div class="dish-img"><img src="https://rjaypqibeymfopncjxkz.supabase.co/storage/v1/render/image/public/recipePicturesBucket/recipe_picture/1781542577732000.png?width=480&quality=80&format=webp" alt="Dates & Peanut Butter" loading="lazy" /></div><div class="dish-body"><h4>Dates & Peanut Butter</h4></div></div>
     </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section style="background:var(--white);">
+<section id="results" style="background:var(--white);">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="tag">Real results</span>
@@ -593,7 +614,7 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
       <div class="testi reveal">
         <div class="stars">★★★★★</div>
         <p>"WhatsApp support that actually responds. They adjusted my plan twice when my training changed."</p>
-        <div class="testi-who"><div class="avatar">T</div><div><div class="name">Tony H.</div><div class="meta">Jbeil</div></div></div>
+        <div class="testi-who"><div class="avatar">T</div><div><div class="name">Tony H.</div><div class="meta">Beirut</div></div></div>
       </div>
     </div>
   </div>
@@ -605,11 +626,11 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
     <div class="pricing-card reveal">
       <div>
         <h3>Priced by your plate, not a flat fee</h3>
-        <p class="muted">You only pay for the macros and portion sizes your plan actually needs — calculated transparently, gram by gram.</p>
+        <p class="muted">You only pay for what your plan actually needs, gram by gram.</p>
         <ul>
-          <li>No mystery subscription tiers</li>
-          <li>Adjust or pause anytime over WhatsApp</li>
-          <li>Delivery scheduled around your week</li>
+          <li>No subscription tiers</li>
+          <li>Pause anytime over WhatsApp</li>
+          <li>Delivery around your week</li>
         </ul>
       </div>
       <a class="btn btn-primary" href="https://app.akli-lb.org" target="_blank" rel="noopener">See my price →</a>
@@ -618,7 +639,7 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
 </section>
 
 <!-- FAQ -->
-<section style="background:var(--white);">
+<section id="faq" style="background:var(--white);">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="tag">Questions</span>
@@ -630,8 +651,8 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
         <div class="faq-a"><p>No — that's the whole point. Answer a few questions about your body and goal, and we calculate everything for you.</p></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Where in Lebanon do you deliver? <span class="plus">+</span></div>
-        <div class="faq-a"><p>We're expanding delivery zones regularly — message us on WhatsApp with your area and we'll confirm coverage instantly.</p></div>
+        <div class="faq-q">Where do you deliver? <span class="plus">+</span></div>
+        <div class="faq-a"><p>We currently deliver from Beirut to Jounieh and the areas around. Message us on WhatsApp with your area and we'll confirm coverage instantly.</p></div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Can I change my plan later? <span class="plus">+</span></div>
@@ -645,19 +666,6 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section>
-  <div class="wrap">
-    <div class="final-cta reveal">
-      <h2>Stop guessing what's on your plate.</h2>
-      <p>Calculate your exact macros in under a minute — then let us cook for you.</p>
-      <a class="btn btn-primary" href="https://app.akli-lb.org" target="_blank" rel="noopener">
-        Get my free macro plan →
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- FOOTER -->
 <footer>
   <div class="wrap foot-grid">
@@ -665,13 +673,14 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
     <div class="foot-links">
       <a href="#how">How it works</a>
       <a href="https://app.akli-lb.org" target="_blank" rel="noopener">Open the app</a>
-      <a href="https://wa.me/96100000000" target="_blank" rel="noopener">WhatsApp us</a>
+      <a href="https://wa.me/96181567192" target="_blank" rel="noopener">WhatsApp us</a>
+      <a class="toters-badge" href="https://toters.app" target="_blank" rel="noopener" title="Coming soon on Toters">Coming soon on <img src="assets/toters.png" alt="Toters" /></a>
     </div>
     <div class="muted" style="font-size:12px;">© 2026 Akli, Lebanon.</div>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/96100000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+<a class="wa-float" href="https://wa.me/96181567192" target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.4 1.26 4.83L2 22l5.41-1.34a9.86 9.86 0 0 0 4.63 1.18h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.81 14.04c-.24.68-1.4 1.33-1.93 1.41-.49.08-1.11.11-1.79-.11-.41-.13-.94-.31-1.62-.6-2.84-1.23-4.7-4.07-4.84-4.27-.14-.2-1.15-1.53-1.15-2.91s.72-2.06.98-2.34c.24-.27.54-.34.72-.34h.52c.17 0 .39-.02.6.46.24.55.81 1.92.88 2.06.07.14.12.31.02.49-.1.18-.15.29-.29.45-.14.16-.3.36-.43.49-.14.14-.29.29-.13.57.17.29.76 1.26 1.63 2.04 1.12 1 2.06 1.32 2.35 1.46.29.14.46.12.64-.07.18-.2.74-.86.94-1.16.2-.29.4-.24.66-.14.27.1 1.71.81 2 .95.29.14.49.21.56.33.07.12.07.69-.17 1.36z"/></svg>
 </a>
 

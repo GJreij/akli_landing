@@ -358,6 +358,15 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
 .toters-badge:hover{color:var(--primary);}
 .toters-badge:hover img{opacity:1;}
 
+.nav-toters{
+  display:flex;align-items:center;justify-content:center;
+  width:34px;height:34px;border-radius:50%;background:var(--white);
+  border:1px solid var(--border);flex-shrink:0;
+  transition:transform .2s, box-shadow .2s;
+}
+.nav-toters img{height:16px;width:auto;}
+.nav-toters:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.1);}
+
 /* ---------- whatsapp float ---------- */
 .wa-float{
   position:fixed;bottom:24px;right:24px;z-index:90;
@@ -399,6 +408,9 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
       <a href="#results">Results</a>
       <a href="#faq">FAQ</a>
     </div>
+    <a class="nav-toters" href="https://toters.app" target="_blank" rel="noopener" title="Coming soon on Toters" aria-label="Toters">
+      <img src="assets/toters.png" alt="Toters" />
+    </a>
     <a class="nav-cta" href="https://app.akli-lb.org" target="_blank" rel="noopener">
       Get my plan
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -505,7 +517,7 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
     <div class="reveal">
       <span class="tag">Try it now</span>
       <h2>See your numbers before you commit to anything</h2>
-      <p style="margin-bottom:24px;">Same engine behind the app — real metabolic formulas, no guesswork.</p>
+      <p style="margin-bottom:24px;">Same engine behind the website — real metabolic formulas, no guesswork.</p>
       <ul class="feature-list">
         <li><span class="ico">⚙</span> Based on your body & activity level</li>
         <li><span class="ico">🎯</span> Tuned to cut, maintain, or bulk</li>
@@ -629,7 +641,7 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
         <p class="muted">You only pay for what your plan actually needs, gram by gram.</p>
         <ul>
           <li>No subscription tiers</li>
-          <li>Pause anytime over WhatsApp</li>
+          <li>Pause anytime — just stop ordering</li>
           <li>Delivery around your week</li>
         </ul>
       </div>
@@ -656,11 +668,15 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
       </div>
       <div class="faq-item">
         <div class="faq-q">Can I change my plan later? <span class="plus">+</span></div>
-        <div class="faq-a"><p>Yes. Your goals change, your plan should too. Message us on WhatsApp anytime to adjust macros, portions, or delivery schedule.</p></div>
+        <div class="faq-a"><p>Yes, anytime — you can change your plan directly on the website whenever you want. Need a hand or have questions about it? Message us on WhatsApp and we'll help you out.</p></div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Is there a subscription commitment? <span class="plus">+</span></div>
         <div class="faq-a"><p>No lock-in. Order what you need, when you need it.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How much does it cost? <span class="plus">+</span></div>
+        <div class="faq-a"><p>There's no flat fee or fixed subscription price — your cost is estimated based on your personal goals and needs. You pay exactly for what you receive, gram by gram, so your plan only costs as much as it actually takes to hit your numbers.</p></div>
       </div>
     </div>
   </div>
@@ -672,7 +688,7 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
     <div class="brand"><img src="assets/logo.png" alt="Akli" style="height:24px;" />akli</div>
     <div class="foot-links">
       <a href="#how">How it works</a>
-      <a href="https://app.akli-lb.org" target="_blank" rel="noopener">Open the app</a>
+      <a href="https://app.akli-lb.org" target="_blank" rel="noopener">Visit the website</a>
       <a href="https://wa.me/96181567192" target="_blank" rel="noopener">WhatsApp us</a>
       <a class="toters-badge" href="https://toters.app" target="_blank" rel="noopener" title="Coming soon on Toters">Coming soon on <img src="assets/toters.png" alt="Toters" /></a>
     </div>

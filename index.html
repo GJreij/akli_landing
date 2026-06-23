@@ -409,10 +409,10 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
       <a href="#results">Results</a>
       <a href="#faq">FAQ</a>
     </div>
-    <a class="nav-toters" href="https://toters.app" target="_blank" rel="noopener" title="Coming soon on Toters" aria-label="Toters">
+    <a class="nav-toters" href="https://toters.app" target="_blank" rel="noopener" title="Coming soon on Toters" aria-label="Toters" data-cta="toters_nav">
       <img src="assets/toters.png" alt="Toters" />
     </a>
-    <a class="nav-cta" href="https://app.akli-lb.org" target="_blank" rel="noopener">
+    <a class="nav-cta" href="https://app.akli-lb.org" target="_blank" rel="noopener" data-cta="nav">
       Get my plan
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
     </a>
@@ -420,7 +420,7 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="hero">
   <div class="hero-bg">
     <div class="blob blob1"></div>
     <div class="blob blob2"></div>
@@ -432,11 +432,11 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
       <h1>Your goal.<br><em>Your macros.</em><br>Your meals.</h1>
       <p class="lead">Tell us your goal — we calculate your exact protein, carbs and fat, then cook meals built around <em>your</em> numbers.</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="https://app.akli-lb.org" target="_blank" rel="noopener">
+        <a class="btn btn-primary" href="https://app.akli-lb.org" target="_blank" rel="noopener" data-cta="hero">
           Calculate my plan — free
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
-        <a class="btn btn-ghost" href="#how">See how it works</a>
+        <a class="btn btn-ghost" href="#how" data-cta="see_how_it_works">See how it works</a>
       </div>
       <div class="trustline">
         <span>✓ No lock-in</span>
@@ -513,7 +513,7 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
 </section>
 
 <!-- CALCULATOR -->
-<section class="calc-section">
+<section class="calc-section" id="calculator">
   <div class="wrap calc-grid">
     <div class="reveal">
       <span class="tag">Try it now</span>
@@ -581,7 +581,7 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
         </div>
       </div>
 
-      <button class="calc-cta" onclick="window.open('https://app.akli-lb.org','_blank')">
+      <button class="calc-cta" onclick="window.open('https://app.akli-lb.org','_blank')" data-cta="calculator">
         Build my real plan on Akli →
       </button>
     </div>
@@ -634,7 +634,7 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
 </section>
 
 <!-- PRICING TEASER -->
-<section>
+<section id="pricing">
   <div class="wrap">
     <div class="pricing-card reveal">
       <div>
@@ -646,7 +646,7 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
           <li>Delivery around your week</li>
         </ul>
       </div>
-      <a class="btn btn-primary" href="https://app.akli-lb.org" target="_blank" rel="noopener">See my price →</a>
+      <a class="btn btn-primary" href="https://app.akli-lb.org" target="_blank" rel="noopener" data-cta="pricing">See my price →</a>
     </div>
   </div>
 </section>
@@ -689,19 +689,161 @@ footer{padding:48px 0 32px;border-top:1px solid var(--border);}
     <div class="brand"><img src="assets/logo.png" alt="Akli" style="height:24px;" />akli</div>
     <div class="foot-links">
       <a href="#how">How it works</a>
-      <a href="https://app.akli-lb.org" target="_blank" rel="noopener">Visit the website</a>
-      <a href="https://wa.me/96181567192" target="_blank" rel="noopener">WhatsApp us</a>
-      <a class="toters-badge" href="https://toters.app" target="_blank" rel="noopener" title="Coming soon on Toters">Coming soon on <img src="assets/toters.png" alt="Toters" /></a>
+      <a href="https://app.akli-lb.org" target="_blank" rel="noopener" data-cta="footer">Visit the website</a>
+      <a href="https://wa.me/96181567192" target="_blank" rel="noopener" data-cta="whatsapp_footer">WhatsApp us</a>
+      <a class="toters-badge" href="https://toters.app" target="_blank" rel="noopener" title="Coming soon on Toters" data-cta="toters_footer">Coming soon on <img src="assets/toters.png" alt="Toters" /></a>
     </div>
     <div class="muted" style="font-size:12px;">© 2026 Akli, Lebanon.</div>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/96181567192" target="_blank" rel="noopener" aria-label="WhatsApp">
+<a class="wa-float" href="https://wa.me/96181567192" target="_blank" rel="noopener" aria-label="WhatsApp" data-cta="whatsapp_float">
   <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.4 1.26 4.83L2 22l5.41-1.34a9.86 9.86 0 0 0 4.63 1.18h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.81 14.04c-.24.68-1.4 1.33-1.93 1.41-.49.08-1.11.11-1.79-.11-.41-.13-.94-.31-1.62-.6-2.84-1.23-4.7-4.07-4.84-4.27-.14-.2-1.15-1.53-1.15-2.91s.72-2.06.98-2.34c.24-.27.54-.34.72-.34h.52c.17 0 .39-.02.6.46.24.55.81 1.92.88 2.06.07.14.12.31.02.49-.1.18-.15.29-.29.45-.14.16-.3.36-.43.49-.14.14-.29.29-.13.57.17.29.76 1.26 1.63 2.04 1.12 1 2.06 1.32 2.35 1.46.29.14.46.12.64-.07.18-.2.74-.86.94-1.16.2-.29.4-.24.66-.14.27.1 1.71.81 2 .95.29.14.49.21.56.33.07.12.07.69-.17 1.36z"/></svg>
 </a>
 
 <script>
+// ---------- analytics ----------
+// Lightweight first-party tracking, writes straight into the same Supabase
+// `analytics_event` table the akli-web app uses (see FrontEnd/akli-web/src/lib/analytics.ts),
+// tagged with event_category="landing" so it's filterable from app traffic.
+// RLS policy "anyone can insert analytics events" (check: true) is what makes
+// a direct anon-key insert from this separate Netlify origin possible.
+(function(){
+  var SUPABASE_URL = "https://rjaypqibeymfopncjxkz.supabase.co";
+  var SUPABASE_ANON_KEY = "sb_publishable_4KtAZtqFvNzRuurFSRcldw_X2vdsQRV";
+
+  var ANON_KEY_LS = "akli_anon_id", UTM_KEY_LS = "akli_utm";
+  var SESSION_KEY_SS = "akli_session_id", SESSION_TS_SS = "akli_session_ts";
+  var SESSION_TIMEOUT_MS = 30 * 60 * 1000;
+
+  function uuid(){
+    if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,function(c){
+      var r=(Math.random()*16)|0; return (c==="x"?r:(r&0x3)|0x8).toString(16);
+    });
+  }
+
+  function getAnonId(){
+    var id = localStorage.getItem(ANON_KEY_LS);
+    if(!id){ id = uuid(); localStorage.setItem(ANON_KEY_LS, id); }
+    return id;
+  }
+
+  function getSessionId(){
+    var now = Date.now();
+    var lastTs = Number(sessionStorage.getItem(SESSION_TS_SS) || 0);
+    var id = sessionStorage.getItem(SESSION_KEY_SS);
+    if(!id || now - lastTs > SESSION_TIMEOUT_MS){ id = uuid(); sessionStorage.setItem(SESSION_KEY_SS, id); }
+    sessionStorage.setItem(SESSION_TS_SS, String(now));
+    return id;
+  }
+
+  function getUtm(){
+    var params = new URLSearchParams(window.location.search);
+    var fromUrl = { source: params.get("utm_source"), medium: params.get("utm_medium"), campaign: params.get("utm_campaign") };
+    if (fromUrl.source || fromUrl.medium || fromUrl.campaign){
+      localStorage.setItem(UTM_KEY_LS, JSON.stringify(fromUrl));
+      return fromUrl;
+    }
+    try { var stored = localStorage.getItem(UTM_KEY_LS); if (stored) return JSON.parse(stored); } catch(e){}
+    return { source: null, medium: null, campaign: null };
+  }
+
+  function getDeviceInfo(){
+    var ua = navigator.userAgent || "";
+    var device_type = /Mobi|Android/i.test(ua) ? (/iPad|Tablet/i.test(ua) ? "tablet" : "mobile") : "desktop";
+    var browser = /Edg\//.test(ua) ? "Edge" : /Chrome\//.test(ua) ? "Chrome" : (/Safari\//.test(ua) && !/Chrome/.test(ua)) ? "Safari" : /Firefox\//.test(ua) ? "Firefox" : "Other";
+    var os = /iPhone|iPad|iPod/.test(ua) ? "iOS" : /Android/.test(ua) ? "Android" : /Mac OS X/.test(ua) ? "macOS" : /Windows/.test(ua) ? "Windows" : "Other";
+    return { device_type: device_type, browser: browser, os: os };
+  }
+
+  function send(rows, useBeacon){
+    var url = SUPABASE_URL + "/rest/v1/analytics_event";
+    var body = JSON.stringify(rows);
+    if (useBeacon && navigator.sendBeacon) {
+      // sendBeacon can't set custom headers, so PostgREST needs the apikey as a query param instead.
+      navigator.sendBeacon(url + "?apikey=" + SUPABASE_ANON_KEY, new Blob([body], { type: "application/json" }));
+      return;
+    }
+    fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", apikey: SUPABASE_ANON_KEY, Authorization: "Bearer " + SUPABASE_ANON_KEY, Prefer: "return=minimal" },
+      body: body,
+      keepalive: !!useBeacon,
+    }).catch(function(){ /* best-effort, never block the page */ });
+  }
+
+  function track(eventName, metadata, category, useBeacon){
+    var utm = getUtm(), device = getDeviceInfo();
+    send([{
+      anon_id: getAnonId(),
+      session_id: getSessionId(),
+      user_id: null,
+      event_name: eventName,
+      event_category: category || "landing",
+      page: window.location.pathname,
+      referrer: document.referrer || "",
+      utm_source: utm.source, utm_medium: utm.medium, utm_campaign: utm.campaign,
+      device_type: device.device_type, browser: device.browser, os: device.os,
+      metadata: metadata || {},
+      created_at: new Date().toISOString(),
+    }], useBeacon);
+  }
+  window.akliTrack = track;
+
+  // page_view on load
+  track("page_view", {}, "navigation");
+
+  // CTA / button clicks — every element tagged data-cta="..."
+  document.querySelectorAll("[data-cta]").forEach(function(el){
+    el.addEventListener("click", function(){
+      track("cta_click", { location: el.getAttribute("data-cta"), text: el.textContent.trim().slice(0,60) });
+    });
+  });
+
+  // Section views — fires once per section the first time 40% of it is visible.
+  var seenSections = {};
+  var sectionObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting && e.target.id && !seenSections[e.target.id]){
+        seenSections[e.target.id] = true;
+        track("section_view", { section: e.target.id });
+      }
+    });
+  }, { threshold: 0.4 });
+  ["hero","how","calculator","menu","results","pricing","faq"].forEach(function(id){
+    var el = document.getElementById(id);
+    if (el) sectionObs.observe(el);
+  });
+
+  // Calculator engagement — fired once, the first time the user touches any input.
+  var calcTracked = false;
+  document.querySelectorAll("#calculator input, #calculator select, #sexRow button").forEach(function(el){
+    el.addEventListener("input", fireCalcUsed);
+    el.addEventListener("click", fireCalcUsed);
+  });
+  function fireCalcUsed(){
+    if (calcTracked) return;
+    calcTracked = true;
+    track("calculator_interacted", {});
+  }
+
+  // Time on page + max scroll depth — sent once when the user leaves/hides the tab.
+  var startTs = Date.now(), maxScrollPct = 0, sentLeave = false;
+  window.addEventListener("scroll", function(){
+    var doc = document.documentElement;
+    var pct = Math.round(100 * (window.scrollY + window.innerHeight) / doc.scrollHeight);
+    if (pct > maxScrollPct) maxScrollPct = Math.min(pct, 100);
+  }, { passive: true });
+  function sendLeave(){
+    if (sentLeave) return;
+    sentLeave = true;
+    track("time_on_page", { seconds: Math.round((Date.now() - startTs) / 1000), max_scroll_pct: maxScrollPct }, "landing", true);
+  }
+  document.addEventListener("visibilitychange", function(){ if (document.visibilityState === "hidden") sendLeave(); });
+  window.addEventListener("pagehide", sendLeave);
+})();
+
 // nav blur on scroll
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>10);});
@@ -718,7 +860,10 @@ document.querySelectorAll('.faq-item').forEach(item=>{
   q.addEventListener('click',()=>{
     const open=item.classList.contains('open');
     document.querySelectorAll('.faq-item.open').forEach(o=>{o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null;});
-    if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+    if(!open){
+      item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';
+      if(window.akliTrack) window.akliTrack('faq_opened',{question:q.textContent.replace('+','').trim()});
+    }
   });
 });
 
